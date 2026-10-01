@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css" />
+    <title>Richard's Website</title>
+    <script src="functions.js"></script>
+</head>
+    <body>
+        <div class="square-background"></div>
+                  <nav class="navbar">
+            <div class="nav-container">
+
+                <!-- Site Name, considering logo in future -->
+                <div class="logo">
+                    Navigate
+                </div>
+
+                <!-- Hamburger Toggle -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Links to the other pages -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Landing</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="performance.html">Quant</a></li>
+                    <li>
+                        <button class="style-toggle" onclick="toggleStyleSheet()">
+                            Toggle Style
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>  
+
+
+
+        <main class="qualifications-container">
+
+            <!-- Left side -->
+            <div class="qual-left">
+
+                <div class="qual-box">
+                    <h2>Technical Skills</h2>
+                    <p> <!-- Rework these poorly made descriptions -->
+                        I have experience with programming in C++, Python, and JavaScript, 
+                        along with foundational knowledge of HTML and CSS for web development, 
+                        which I am currently learning in CSCE 331 (Foundations of Software Engineering). 
+                        Additionally, I am comfortable working with Git version control and collaborative 
+                        development workflows. My background also includes problem-solving, debugging, 
+                        and group-based work.
+                    </p>
+                </div>
+
+                <div class="qual-box">
+                    <h2>Technical Areas of Interest</h2>
+                    <p>
+                        In terms of programming, I am particularly interested in game development, systems programming, 
+                        and interactive software design, and I enjoy exploring how performance, architecture, and user 
+                        experience intersect, especially in real-time applications and games. This relates to my next 
+                        set of interests, which are the more psychological sides of how people interact with software 
+                        and how they change as a result of it.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Right side -->
+            <div class="qual-right">
+                <div class="qual-box resume-box">
+                    <h2>Resume</h2>
+
+                    <!-- Embedded Google Drive PDF -->
+                    <!-- Set up resume and replace "FILE_ID" -->
+                    <iframe
+                        src="https://drive.google.com/file/d/1UkcXMq6fV1erGdFJdDXGnYiN-Bd61fi6/preview"
+                        width="100%"
+                        height="700"
+                        allow="autoplay">
+                    </iframe>
+
+                    <p class="resume-note">
+                        <a href="https://drive.google.com/file/d/1cWffLiBLVMiVuiKzrEpUfl8KvLlpKbSp/view" target="_blank">
+                            Open Resume in New Tab
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+        </main>
+        
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css" />
+    <title>Richard's Website</title>
+    <script src="functions.js"></script>
+</head>
+    <body>
+        <div class="square-background"></div>
+                  <nav class="navbar">
+            <div class="nav-container">
+
+                <!-- Site Name, considering logo in future -->
+                <div class="logo">
+                    Navigate
+                </div>
+
+                <!-- Hamburger Toggle -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Links to the other pages -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Landing</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="performance.html">Quant</a></li>
+                    <li>
+                        <button class="style-toggle" onclick="toggleStyleSheet()">
+                            Toggle Style
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>  
+
+
+
+        <main class="projects-container">
+            <!-- Project One -->
+            <div class="project-box">
+                <h2 class="project-title">Quant Trading Model</h2>
+                <div class="project-content">
+                    <a href="https://www.tamuaic.org">
+                        <img src="images/aic_maroon_clipped_logo.jpg" alt="Project One Image">
+                    </a>
+                    <p>
+                        As a member of the Aggie Investment Club (AIC) Quant, I am part of a group developing a novel quantitative trading model. 
+                        Our project aims to make use of some more alternative data to go and make attempts at uncovering predictive signals not yet 
+                        captured by traditional financial analysis. Primarily, we are integrating and processing more diverse, sentiment-based data, 
+                        such as Amazon product reviews, volume and trend data from Google Trends, and TikTok comments for real-time sentiment extraction. 
+                        This project has provided me with hands-on experience in matters such as data science, financial modeling, and system development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Two -->
+            <div class="project-box">
+                <h2 class="project-title">Game Jams</h2>
+                <div class="project-content">
+                    <a href="https://tagdigda.wixsite.com/gamedev">
+                        <img src="images/TAGD Logo.png" alt="Project Two Image">
+                    </a>
+                    <p>
+                        Nearly every semester, I take part in the semester-long game jams hosted by the Texas A&M Game Developers. These extended jams 
+                        provide me the perfect platform to move beyond theory and get my hands on iterating projects from concept to playable build. 
+                        Usually, each jam has individuals working in small, multidisciplinary teams, attempting to tackle the entire pipeline, from initial 
+                        brainstorming and core mechanic design to beyond, like programming, asset creation, and user experience refinement. It is an intensive, 
+                        collaborative process that sharpens both my technical execution and creative problem-solving skills, even if I do not manage to finish 
+                        the game in time for the jam submissions. Additionally, the jams have allowed me to gain further experience with game engines such as 
+                        <a href="https://godotengine.org">Godot</a>, <a href="https://unity.com">Unity</a>, and <a href="https://www.unrealengine.com/en-US">Unreal</a>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project Three -->
+            <div class="project-box">
+                <h2 class="project-title">Blackjack Terminal Game</h2>
+                <div class="project-content">
+                    <a href="https://en.wikipedia.org/wiki/Blackjack">
+                        <img src="images/BlackJack.jpg" alt="Project Three Image">
+                    </a>
+                    <p>
+                        Early on in college, my final project for ENGR 120 (Introduction to Engineering) was to create a basic game that would run using Python. My team created a terminal version of Black Jack, which would show ascii art of the cards in the player's hand. While not the most exciting, it still took time to figure out how to design it all in Python. Furthermore, as it was one of my first collaborative projects, it gave me a good view into how working in a team environment, rather than alone, works. As such, it gave me great experience in terms of working with others for programming and the workflow that is involved.
+                    </p>
+                </div>
+            </div>
+
+        </main>
+        
+    </body>
+</html>

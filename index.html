@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css" />
+    <title>Richard's Website</title>
+    <script src="functions.js"></script>
+</head>
+    <body>
+        
+        <div class="square-background"></div>
+          <nav class="navbar">
+            <div class="nav-container">
+
+                <!-- Site Name, considering logo in future -->
+                <div class="logo">
+                    Navigate
+                </div>
+
+                <!-- Hamburger Toggle -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Links to the other pages -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Landing</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="performance.html">Quant</a></li>
+                    <li>
+                        <button class="style-toggle" onclick="toggleStyleSheet()">
+                            Toggle Style
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>   
+        
+        
+
+        <main class="home-container">
+            <!-- Left column of boxes -->
+            <div class="left-column">
+                <!-- Top -->
+                <div class="box name-box">
+                    <h1>Richard Ngo</h1>
+                </div>
+
+                <!-- Middle -->
+                <!-- Remember to grab a proper photo later -->
+                <div class="box image-box">
+                    <img src="images/SelfImage.jpg" alt="Richard Photo">
+                </div>
+                
+                <!-- Bottom -->
+                
+            </div>
+
+            <!-- Right column of boxes -->
+            <div class="right-column">
+                <div class="box description-box">
+                    <h2>Personal Description</h2>
+                    <p>
+                        Howdy! My name is Richard Ngo. I am a junior Computer Science student at Texas A&M. My passion lies at the intersection of creative technology and intelligent systems, specifically in matters such as game development and human-computer interaction. I am fascinated by the full spectrum of building engaging digital experiences. This starts with matters such as designing intuitive user interfaces and core gameplay loops, then diving into the implementation layer, using engines like Godot, Unreal, and Unity to bring those designs to reality. Furthermore, beyond just the "how," I hold deep curiosity about the "why" behind modern software. This results in a strong interest in understanding how AI works under the hood, from the foundational algorithms that power them to the neural network architectures that they are built upon.
+                    </p>
+                    <p> 
+
+                    </p>
+                    <p> 
+                        Beyond my work in computer science, I am also interested in psychology and how people are mentally affected by the world around us, especially concerning modern technologies' effects on the mind. Currently, one of the classes I am enrolled in is PBSI 245 (Introduction to Psychological Science Methods). I hope to one day put that knowledge to use in research to further study the effects that our new lifestyles that came about as a result of continued innovations, such as AI, have on our minds, like learning or attention span. Now, while not completely related, this still pairs well with my main focus of computer science in terms of how humans interact with software.
+                    </p>
+                </div>
+                <div class="contact-image-row">
+                    <div class="box contact-box">
+                        <h2>Contact Info</h2>
+                        <ul>
+                            <li>Email: <a href="mailto:richard.ngo-2006@tamu.edu">richard.ngo-2006@tamu.edu</a></li>
+                            <li>Phone: 832-310-5357</li>
+                            <li>Location: College Station, Texas</li>
+                            <li>GitHub: <a href="https://github.com/RichardN-Git">RichardN-Git</a></li>
+                            <li>LinkedIn: <a href="https://www.linkedin.com/in/richard-ngo-782400357/">Richard Ngo</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="box additional-image-box">
+                        <img src="images/Group.jpg" alt="Group Image">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>   
+
+
+        
+    </body>
+</html>

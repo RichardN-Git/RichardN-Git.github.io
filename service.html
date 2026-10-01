@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="mainStyleSheet" rel="stylesheet" href="style1.css" />
+    <title>Richard's Website</title>
+    <script src="functions.js"></script>
+</head>
+    <body>
+        <div class="square-background"></div>
+                  <nav class="navbar">
+            <div class="nav-container">
+
+                <!-- Site Name, considering logo in future -->
+                <div class="logo">
+                    Navigate
+                </div>
+
+                <!-- Hamburger Toggle -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <!-- Links to the other pages -->
+                <ul class="nav-links">
+                    <li><a href="index.html">Landing</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="qualifications.html">Qualifications</a></li>
+                    <li><a href="service.html">Service</a></li>
+                    <li><a href="performance.html">Quant</a></li>
+                    <li>
+                        <button class="style-toggle" onclick="toggleStyleSheet()">
+                            Toggle Style
+                        </button>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>  
+
+
+        <main class="service-container">
+
+            <div class="service-box">
+                <h2>Habitat For Humanity</h2>
+                <a href="https://www.aggielandhabitat.org">
+                    <img src="images/HabitatForHumanity.jpg" alt="Community Volunteering">
+                </a>
+                <span class="service-tag">Volunteer Work</span>
+                <p>
+                    
+                </p>
+            </div>
+
+            <div class="service-box">
+                <h2>The Big Event</h2>
+                <a href="https://bigevent.tamu.edu">
+                    <img src="images/TheBigEvent.jpg" alt="Community Volunteering">
+                </a>
+                <span class="service-tag">Volunteer Work</span>
+                <p>
+                    Last year, as a sophmore, I volunteered for the Big Event and helped a homeowner clean out their backyard and pull all the weeds
+                    from their garden.
+                </p>
+            </div>
+        </main>
+        
+    </body>
+</html>

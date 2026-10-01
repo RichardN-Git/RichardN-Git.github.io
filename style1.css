@@ -1,0 +1,571 @@
+/* Reset for styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000000;
+    /*background-color: #351223;*/
+}
+
+/* The Navbar itself */
+.navbar {
+    /*background-color: #123524;*/
+    background-color: #126127;
+    padding: 1.25rem 1.5rem;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Called "Logo", just my name for now */
+.logo {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Make the text do things when hovered */
+.nav-links a:hover {
+    background-color: #00a600;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsive, make the hamburger menu */
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #126127;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        margin: 0.25rem 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.75rem;
+        width: 100%;
+    }
+
+    /* Show the menu when the user toggles this */
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
+}
+
+/* ----------------  Landing Page Things  ----------------*/
+
+/* The page container */
+.home-container {
+    display: flex;
+    gap: 1.5rem;       /* Gap between columns, change for future adjustments */
+    padding: 2rem;
+}
+
+/* Left Column, three boxes */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+/* Right Column, one larger box for my description */
+.right-column {
+    flex: 2;           /* Keep this larger than the flex of the left-column */
+}
+
+/* General box styling */
+.box {
+    /* #0E2A1D; #126127; #00a600 */
+    /* #97202c; #f4f4f4; More of a light mode color scheme*/ 
+    background-color: #0E2A1D;;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    /*box-shadow: 0 2px 6px rgba(18,97,39,1);*/
+    border: 2px solid #126127;
+}
+
+.box h1 {
+    font-size: 60px;
+}
+
+/* Box for image */
+.image-box img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Box for contact things */
+.contact-box ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+.contact-box a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-box a:hover {
+    color: #00a600;
+}
+
+/* Box for description */
+.description-box p {
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.description-box h2 {
+    line-height: 1.5;
+    font-size: 40px;
+    margin-bottom: 1rem;
+}
+
+
+/* Responsive, stack columns on small screens (testing with sideways monitor) */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+    }
+}
+
+/* -------- Extra Landing -------- */
+
+.contact-image-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.contact-image-row ul {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.contact-image-row a {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.contact-image-row .contact-box {
+    flex: 1;
+}
+
+/* Additional image box in the contact-image-row */
+.contact-image-row .additional-image-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.additional-image-box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+}
+
+/* -------- Projects Section -------- */
+
+.projects-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Each of the long boxes */
+.project-box {
+    background-color: #0E2A1D;
+    border: 2px solid #126127;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+}
+
+.project-box a {
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Make the text do things when hovered */
+.project-box a:hover {
+    color: #00a600;
+}
+
+/* Title at the top of the box it is for */
+.project-title {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* The image and text layout */
+.project-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Should keep the image on the left */
+.project-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Text goes to the right */
+.project-content p {
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* Responsive, stack image on top for small screens (testing with sideways monitor) */
+@media (max-width: 768px) {
+    .project-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-content img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* -------- Qualifications Section -------- */
+
+.qualifications-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Left column */
+.qual-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+/* Right column */
+.qual-right {
+    flex: 2;
+}
+
+/* Box styling for both */
+.qual-box {
+    background-color: #0E2A1D;
+    border: 2px solid #126127;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+}
+
+/* Resume box teansy tweaks */
+.resume-box iframe {
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* This is meant for the link to the resume as a whole */
+.resume-note {
+    margin-top: 0.75rem;
+    text-align: right;
+}
+
+.resume-note a {
+    color: #7CFFB2;
+    text-decoration: none;
+}
+
+.resume-note a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive layout, stacks it all up for small screens (testing with sideways monitor) */
+@media (max-width: 768px) {
+    .qualifications-container {
+        flex-direction: column;
+    }
+}
+
+/* -------- Service Page -------- */
+
+.service-container {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* The individual service box */
+.service-box {
+    background-color: #0E2A1D;
+    border: 2px solid #126127;
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The images */
+.service-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0.75rem 0;
+}
+
+/* Modifier tag below image */
+.service-tag {
+    font-size: 0.85rem;
+    color: #7CFFB2;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Description of service itself */
+.service-box p {
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+/* Responsive, stack on smaller screens for small screens (testing with sideways monitor) */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+    }
+}
+
+/* -------- Fancy Square Grid That Moves -------- */
+
+.square-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* vh and vw should make it scale to the screen, not sure how to make the pattern repeat perfectly, look below for more */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background-color: #000;
+    /* Line-based square grid */
+    /* NOTE: This does not perfectly repeat, different resolutions cause different issues in the pattern. */
+    /*       Try to find a solution to this later, not all that important as of right now. */
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(76, 76, 76, 0.35) 0,
+            rgba(76, 76, 76, 0.35) 1px,
+            transparent 1px,
+            transparent 20px
+        ),
+        /* The second transparent numbers determine square size, mess with values to get a good look later */
+        repeating-linear-gradient(
+            90deg,
+            rgba(76, 76, 76, 0.35) 0,
+            rgba(76, 76, 76, 0.35) 1px,
+            transparent 1px,
+            transparent 20px
+        );
+    /* The time here is for how fast it moves, originally had it at 180s. Decided that was too slow. */
+    animation: squareMove 50s linear infinite;
+}
+/* Moves Diagonally Up-Left */
+@keyframes squareMove {
+    from {
+        background-position: 0 0, 0 0;
+    }
+    to {
+        background-position: -1000px -1000px, -1000px -1000px;
+    }
+}
+
+/* -------- Layout Control Stuff -------- */
+.left-nav-layout main {
+    margin-left: 250px;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.top-nav-layout main {
+    margin-left: 0;
+    padding: 0;
+}
+
+/* Ensure square background adjusts for left nav */
+.left-nav-layout .square-background {
+    left: 250px;
+    width: calc(100vw - 250px);
+}
+
+.top-nav-layout .square-background {
+    left: 0;
+    width: 100vw;
+}
+
+/* -------- Style Button -------- */
+.style-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    /* If I make this taller, it shifts the other links up, not sure how to fix */
+    padding: 0rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.style-toggle:hover {
+    background-color: #00a600;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .style-toggle {
+        display: block;
+        padding: 0.75rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* -------- Transition Effects -------- */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition-overlay.active {
+    opacity: 1;
+}
+
+.transition-overlay.fade-out {
+    opacity: 0;
+}
+
+/* Style 1 to Style 2 transition */
+.transition-overlay.style1-to-style2 {
+    background-color: #f4f4f4;
+}
+
+.transition-overlay.style1-to-style2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #97202c;
+    transform: translateX(-200%);
+    transition: left .4s ease;
+}
+
+.transition-overlay.style1-to-style2.active::before {
+    left: 0; /* Slide all the way to the left edge */
+}
+
+/* Style 2 to Style 1 transition */
+.transition-overlay.style2-to-style1 {
+    background-color: #000000;
+}
+
+.transition-overlay.style2-to-style1::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #126127;
+    transition: top .4s ease;
+}
+
+.transition-overlay.style2-to-style1.active::before {
+    top: 0; /* Slide all the way up to the top */
+}

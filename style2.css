@@ -1,0 +1,574 @@
+
+/* Reset for styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* The Navbar itself - now on the left */
+.navbar {
+    background-color: #97202c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    padding: 1.5rem;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+}
+
+/* Called "Logo", just my name for now */
+.logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Make the text do things when hovered */
+.nav-links a:hover {
+    color: #ffcc00;
+    padding-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger - hidden in desktop, shown in mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.hamburger span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* ----------------  Landing Page Things  ----------------*/
+
+/* The page container */
+.home-container {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+/* Left Column, three boxes */
+.left-column {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 2rem;
+}
+
+/* Right Column, one larger box for my description */
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* General box styling */
+.box {
+    background-color: #ffffff;
+    color: #333;
+    padding: 2rem;
+    border-radius: 48px 6px 48px 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 14px 36px rgba(151, 32, 44, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(151, 32, 44, 0.18);
+}
+/* Box for name for special things */
+.name-box {
+    background: linear-gradient(135deg, #97202c, #b8323c);
+    color: white;
+
+    border-radius: 64px 12px 64px 12px;
+}
+
+.name-box h1 {
+    font-size: 64px;
+    color: white;
+}
+
+/* Box for image */
+.image-box {
+    padding: 0;
+    overflow: hidden;
+
+    border-radius: 72px 12px 72px 12px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+/* Box for contact things */
+.contact-box {
+    border-radius: 12px 56px 28px 56px;
+}
+
+.contact-box ul {
+    list-style: disc;
+    padding-left: 1.2rem;
+    color: #97202c;
+}
+
+.contact-box a {
+    color: #97202c;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.contact-box a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* Box for description */
+.description-box {
+    border-radius: 12px 64px 12px 64px;
+}
+
+.description-box p {
+    line-height: 1.6;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.description-box h2 {
+    line-height: 1.5;
+    font-size: 40px;
+    margin-bottom: 1rem;
+    color: #97202c;
+}
+
+/* -------- Extra Landing -------- */
+
+.contact-image-row {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.contact-image-row ul {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.contact-image-row a {
+    line-height: 1.5;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+
+.contact-image-row .contact-box {
+    flex: 1;
+}
+
+/* Additional image box in the contact-image-row */
+.contact-image-row .additional-image-box {
+    padding: 0;
+    overflow: hidden;
+
+    border-radius: 24px 80px 24px 80px;
+}
+
+.additional-image-box img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    border: 2px solid #97202c;
+}
+
+/* -------- Projects Section -------- */
+/* Making these side by side now */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+/* Make the images not look weird and to the side */
+.project-content {
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* Each of the long boxes */
+.project-box {
+    background-color: #ffffff;
+    border: 2px solid #97202c;
+    padding: 2rem;
+    border-radius: 64px 12px 48px 12px;
+    box-shadow: 0 14px 36px rgba(151, 32, 44, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Added hover and bits for more style */
+.project-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(151, 32, 44, 0.2);
+}
+
+.project-content img {
+    border-radius: 48px 8px 48px 8px;
+}
+
+.project-box a {
+    color: #97202c;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* Make the text do things when hovered */
+.project-box a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* Title at the top of the box it is for */
+.project-title {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #97202c;
+}
+
+/* The image and text layout */
+.project-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* Should keep the image on the left */
+.project-content img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 2px solid #97202c;
+}
+
+/* Text goes to the right */
+.project-content p {
+    line-height: 1.6;
+    flex: 1;
+}
+
+/* -------- Qualifications Section -------- */
+/* swapped the resume and the description */
+.qualifications-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+/* Left column */
+.qual-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+/* Right column */
+.qual-right {
+    order: -1;
+    flex: 2;
+}
+
+/* Box styling for both */
+.qual-box {
+    background-color: #ffffff;
+    border: 2px solid #97202c;
+    padding: 2rem;
+    border-radius: 16px 64px 32px 64px;
+    box-shadow: 0 14px 36px rgba(151, 32, 44, 0.14);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.qual-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(151, 32, 44, 0.2);
+}
+
+/* Resume box teansy tweaks */
+.resume-box iframe {
+    border-radius: 48px 12px 48px 12px;
+}
+
+/* This is meant for the link to the resume as a whole */
+.resume-note {
+    margin-top: 0.75rem;
+    text-align: right;
+}
+
+.resume-note a {
+    color: #97202c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resume-note a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* -------- Service Page -------- */
+
+.service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 2rem 0;
+}
+
+/* The individual service box */
+.service-box {
+    background-color: #ffffff;
+    border: 2px solid #97202c;
+    padding: 2rem;
+    border-radius: 72px 16px 48px 16px;
+    box-shadow: 0 16px 40px rgba(151, 32, 44, 0.16);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 48px rgba(151, 32, 44, 0.22);
+}
+
+/* The images */
+.service-box img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    /* Might use this for style1 as well since contain works better it seems */
+    object-fit: contain;
+    background-color: #f4f4f4;
+
+    border-radius: 56px 12px 56px 12px;
+    margin-bottom: 0.75rem;
+}
+/* Modifier tag below image */
+.service-tag {
+    font-size: 0.85rem;
+    color: #97202c;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Description of service itself */
+.service-box p {
+    line-height: 1.6;
+    margin-top: auto;
+}
+
+/* -------- Fancy Square Grid That Moves -------- */
+
+.square-background {
+    position: fixed;
+    top: 0;
+    left: 250px; /* Accounting for left navbar */
+    width: calc(100vw - 250px);
+    height: 100vh;
+    z-index: -1;
+    background-color: #f4f4f4;
+    /* Lighter grid for my cool light mode */
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(151, 32, 44, 0.15) 0,
+            rgba(151, 32, 44, 0.15) 1px,
+            transparent 1px,
+            transparent 20px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(151, 32, 44, 0.15) 0,
+            rgba(151, 32, 44, 0.15) 1px,
+            transparent 1px,
+            transparent 20px
+        ),
+        /* Grid 2 (lighter, offset) */
+        repeating-linear-gradient(
+            0deg,
+            rgba(151, 32, 44, 0.08) 0,
+            rgba(151, 32, 44, 0.08) 1px,
+            transparent 1px,
+            transparent 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(151, 32, 44, 0.08) 0,
+            rgba(151, 32, 44, 0.08) 1px,
+            transparent 1px,
+            transparent 40px
+        );
+    animation: squareMove 50s linear infinite,
+               squareMoveReverse 80s linear infinite;
+}
+/* Moves Diagonally Up-Left */
+@keyframes squareMoveReverse {
+    from {
+        background-position:
+            0 0, 0 0,
+            0 0, 0 0;
+    }
+    to {
+        background-position:
+            -1000px -1000px, -1000px -1000px,
+            1000px 1000px, 1000px 1000px;
+    }
+}
+
+/* -------- Style Button -------- */
+.style-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.style-toggle:hover {
+    color: #ffcc00;
+    padding-left: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+main {
+    margin-left: 265px;
+    margin-top: 10px;
+    padding: 2rem;
+    margin-right: 30px;
+}
+
+/* -------- Transition Effects -------- */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition-overlay.active {
+    opacity: 1;
+}
+
+.transition-overlay.fade-out {
+    opacity: 0;
+}
+
+/* Style 1 to Style 2 transition */
+.transition-overlay.style1-to-style2 {
+    background-color: #f4f4f4;
+}
+
+.transition-overlay.style1-to-style2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 250px;
+    height: 100vh;
+    background-color: #97202c;
+    transform: translateX(0%);
+    transition: left .4s ease;
+}
+
+.transition-overlay.style1-to-style2.active::before {
+    left: 0; /* Slide all the way to the left edge */
+}
+
+/* Style 2 to Style 1 transition */
+.transition-overlay.style2-to-style1 {
+    background-color: #000000;
+}
+
+.transition-overlay.style2-to-style1::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #126127;
+    transition: top .4s ease;
+}
+
+.transition-overlay.style2-to-style1.active::before {
+    top: 0; /* Slide all the way up to the top */
+}
